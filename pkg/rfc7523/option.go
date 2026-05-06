@@ -16,6 +16,7 @@ type (
 	}
 	credentialsOption struct {
 		option.Option
+
 		f func(*credentialsConfig)
 	}
 )
@@ -88,4 +89,3 @@ func WithHTTPClient(client *http.Client) option.Option {
 		c.httpClient = client
 	})
 }
-

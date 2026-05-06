@@ -23,6 +23,9 @@ linters:
     - varnamelen
     - wrapcheck
     - wsl
+    - funcorder
+    - wsl_v5
+    - noinlineerr
   settings:
     gocyclo:
       min-complexity: 20

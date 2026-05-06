@@ -15,6 +15,7 @@ type (
 	}
 	credentialsOption struct {
 		option.Option
+
 		f func(*credentialsConfig)
 	}
 )

@@ -16,6 +16,7 @@ import (
 
 type stsAccessTokenSource struct {
 	oauth2.TokenSource
+
 	stsService *stsv1.Service
 
 	idTokenProvider token.IdentityTokenProvider
