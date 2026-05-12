@@ -189,13 +189,10 @@ func (cp *credentialsProvider) refreshCredentialsLoop(
 		cp.logger.V(1).Info("token sent", "expires", tok.Expiry)
 
 		if tok.Expiry.IsZero() {
-			// Token has no expiry — sleep briefly and re-check context.
-			select {
-			case <-ctx.Done():
-				return
-			case <-time.After(5 * time.Second):
-				continue
-			}
+			// Token has no expiry — treat as valid until context is cancelled.
+			<-ctx.Done()
+
+			return
 		}
 
 		timeUntilExpiry := time.Until(tok.Expiry)
