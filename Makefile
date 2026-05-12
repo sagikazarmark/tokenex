@@ -9,7 +9,7 @@ GOPRIVATE = github.com/riptidesio,go.riptides.io
 
 # Dependency versions
 LICENSEI_VERSION = 0.9.0
-GOLANGCI_VERSION = 2.0.2
+GOLANGCI_VERSION = 2.9.0
 LICSENSEI_VERSION = 0.0.1
 
 .PHONY: help

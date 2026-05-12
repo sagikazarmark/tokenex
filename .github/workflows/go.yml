@@ -14,23 +14,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Set up Go
-      uses: actions/setup-go@v5
-      with:
-        go-version-file: go.mod
-    - name: vet
-      run: make vet
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: vet
+        run: make vet
 
-    - name: fmt
-      run: make fmt
+      - name: fmt
+        run: make fmt
 
-    - name: golangci-lint
-      uses: golangci/golangci-lint-action@v7
-      with:
-        version: v2.0
-          
-    - name: Build
-      run: go build -v ./...
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v7
+        with:
+          version: v2.9
 
+      - name: Build
+        run: go build -v ./...

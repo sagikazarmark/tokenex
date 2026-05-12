@@ -8,7 +8,7 @@ import (
 	"sync"
 )
 
-// Gate is a synchronization primitive that can be opened and closed.
+// SyncGate is a synchronization primitive that can be opened and closed.
 // When open, calls to Wait will return immediately.
 // When closed, calls to Wait will block until it is opened.
 type SyncGate struct {

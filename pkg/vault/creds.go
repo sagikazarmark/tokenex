@@ -104,7 +104,7 @@ type credentialsConfig struct {
 // credentialData holds the secret data and expiration information returned from Vault.
 type credentialData struct {
 	// Data contains the secret data retrieved from Vault.
-	Data map[string]interface{}
+	Data map[string]any
 
 	// ExpiresAt is the time when the credentials expire and should no longer be used.
 	ExpiresAt time.Time

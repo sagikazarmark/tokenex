@@ -10,6 +10,7 @@ type (
 	}
 	valueOption[T any] struct {
 		Option
+
 		id any
 		v  T
 	}
